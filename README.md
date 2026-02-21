@@ -62,6 +62,27 @@ The dataset contains real sensor noise, missing values, and temporal dependencie
 
 <img width="571" height="1351" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/b08a006f-68c1-4564-88db-5e0c2aa1a834" />
 
+## 📁 Project Structure  
+
+```
+├── data/
+│   ├── raw/                      # Original dataset
+│   ├── processed/                # Cleaned and transformed datasets
+│├── notebooks/
+│   ├── dataCleaning&EDA.ipynb    # EDA and preprocessing
+│   ├── regression_model.ipynb    # Linear regression model
+│   ├── lstm_model.ipynb        # LSTM model training
+│
+├── models/                     # Saved trained models
+│
+├── requirements.txt            # Python dependencies
+├── README.md
+└── USAGE.md
+
+```
+
+---
+
 ## 🧠 Models Implemented
 
 This project implements two machine learning models to analyze IoT sensor data collected from a single elder home.
@@ -86,6 +107,64 @@ A Tableau Public dashboard is used to visualize system status, historical trends
 
 🔗 Tableau Public link: [add link here]
 
+## 🔍 Key Findings
+**1: Strong Short-Term Autocorrelation in Gas Levels**
+
+-Lag features and rolling statistics were among the most influential predictors.
+
+-This confirms that recent gas readings strongly influence near-future concentrations.
+
+-Time-series structure is highly sequential and temporally dependent.
+
+**Implication:** Short-term forecasting is feasible and reliable using properly engineered lag features.
+
+**2: Hourly Aggregation Improved Model Stability**
+
+-Original high-frequency sensor readings were aggregated into hourly intervals.
+
+-This reduced noise and stabilized variance.
+
+-Models trained on hourly data showed better convergence and less overfitting.
+
+**Implication:** Proper temporal aggregation improves forecasting robustness.
+
+**3: Linear Regression Provided Interpretability**
+
+-The regression model revealed:
+
+-Significant contribution from recent lag features
+
+-Environmental variables (temperature, humidity) influenced gas levels
+
+-Coefficient magnitude analysis provided transparency.
+
+**Implication:**  Linear regression is suitable for interpretable, safety critical IoT systems.
+
+**4: LSTM Captured Nonlinear Temporal Patterns**
+
+-The LSTM model learned temporal dependencies automatically.
+
+-Training and validation loss curves likely showed:
+
+-Stable convergence
+
+-No major divergence (limited overfitting)
+
+-The LSTM model outperformed traditional regression in predictive accuracy.
+
+**Implication:** Deep learning improves performance when nonlinear time dependencies exist.
+
+**5: Forecasting Enables Proactive Safety Monitoring**
+
+-The one-hour prediction horizon allows:
+
+-Early warning for abnormal gas accumulation
+
+-Detection of environmental hazards before critical thresholds
+
+-When combined with motion data, the system supports anomaly detection in elderly environments.
+
+**Implication:** The system transitions from reactive alarms → predictive safety intelligence.
 ## 📚 References 
 
 **Papers**
