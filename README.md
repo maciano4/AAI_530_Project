@@ -105,7 +105,7 @@ A multiple linear regression model is used to predict future gas concentration l
 
 A Tableau Public dashboard is used to visualize system status, historical trends, and machine learning insights, including gas concentration forecasts and activity patterns.
 
-🔗 Tableau Public link: [add link here]
+🔗 Tableau Public link: https://public.tableau.com/app/profile/ahmed.eldahmy/viz/MSAAI-530-FinalProject-Group5/ElderHomeGasMonitoringDashboard.
 
 ## 🔍 Key Findings
 **1: Strong Short-Term Autocorrelation in Gas Levels**
