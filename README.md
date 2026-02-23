@@ -173,6 +173,9 @@ UCI Machine Learning Repository.
 Single Elder Home Monitoring: Gas and Position Dataset.  
 https://archive.ics.uci.edu/dataset/799/single+elder+home+monitoring+gas+and+position
 
+Long short-term memory: https://doi.org/10.1162/neco.1997.9.8.1735
+
+Multiple Linear Regression: https://www.mdpi.com/2624-6511/6/5/126
 
 ## 🛠️ Libraries & Frameworks
 
